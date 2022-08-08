@@ -115,7 +115,13 @@ function makefaren(event) {
   toptemp.innerHTML = `${farconmax}`;
   bottemp.innerHTML = `${farconmin}`;
 }
-
+function makecelci(event) {
+  event.preventDefault();
+  let toptemp = document.querySelector(`#currenttempmax`);
+  let bottemp = document.querySelector(`#currenttempmin`);
+  toptemp.innerHTML = `${curmetmin}`;
+  bottemp.innerHTML = `${curmetmax}`;
+}
 //finding searched city temp
 function citie(event) {
   event.preventDefault();
