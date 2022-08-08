@@ -47,8 +47,18 @@ body {
 .bigtemp {
   font-weight: 200;
 }
-.metric {
+.celci {
   font-weight: 200;
+}
+.celci:hover {
+  color: #996340;
+}
+.faren {
+  font-weight: 200;
+  color: #a27557;
+}
+.faren:hover {
+  color: #996340;
 }
 .rowtwo {
   height: 200px !important;
