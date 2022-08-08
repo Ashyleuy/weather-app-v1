@@ -38,10 +38,8 @@ let todaysday = Days[weekday];
 let todaysmonth = Months[month];
 let time = `${hour}:${mins}`;
 let DDate = `${date}/${month + 1}/${year}`;
-let Day = document.querySelector("#day");
-Day.innerHTML = `${todaysday}`;
 let Datee = document.querySelector("#date-time");
-Datee.innerHTML = `${time}   ${DDate}`;
+Datee.innerHTML = `Last updated: ${todaysday} - ${DDate}  ${time} `;
 
 //sets next five days
 let ind = [`a`, `b`, `c`, `d`, `e`];
@@ -51,13 +49,12 @@ while (n < 6) {
   let wday = Days[i];
   let cardindex = ind[n - 1];
   let daycard = document.querySelector(`#${cardindex}`);
-  daycard.innerHTML = `Last updated: ${todaysday} ${wday}`;
+  daycard.innerHTML = `Last updated: ${wday}`;
   n = n + 1;
 }
 
 function changecity(l) {
   let cc = document.querySelector("#chosencity");
-  let ccd = document.querySelector("#day");
   cc.innerHTML = `${l}`;
 }
 
