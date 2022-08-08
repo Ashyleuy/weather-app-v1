@@ -84,8 +84,8 @@ function curtemp(response) {
   ctm.innerHTML = ` / ${tempmi}°`;
   let cth = document.querySelector("li#humid");
   let ctp = document.querySelector("li#pres");
-  cth.innerHTML = `Humidity: ${humidity}`;
-  ctp.innerHTML = `Pressure: ${pressure}`;
+  cth.innerHTML = `Humidity: ${humidity}%`;
+  ctp.innerHTML = `Pressure: ${pressure} km/h`;
 }
 function curposbut() {
   navigator.geolocation.getCurrentPosition(CurPosition);
