@@ -110,12 +110,12 @@ function makefaren(event) {
   event.preventDefault();
   faren.classList.remove("active");
   celcius.classList.add("active");
-  let farconmax = (curmetmax * 9) / 5 + 32;
-  let farconmin = (curmetmin * 9) / 5 + 32;
+  let farconmax = Math.floor((curmetmax * 9) / 5 + 32);
+  let farconmin = Math.floor((curmetmin * 9) / 5 + 32);
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
   toptemp.innerHTML = `${farconmax}`;
-  bottemp.innerHTML = `${farconmin}`;
+  bottemp.innerHTML = `/${farconmin}`;
 }
 function makecelci(event) {
   event.preventDefault();
@@ -123,8 +123,8 @@ function makecelci(event) {
   celcius.classList.remove("active");
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
-  toptemp.innerHTML = `${curmetmin}`;
-  bottemp.innerHTML = `${curmetmax}`;
+  toptemp.innerHTML = `${Math.floor(curmetmin)}`;
+  bottemp.innerHTML = `/${Math.floor(curmetmax)}`;
 }
 //finding searched city temp
 function citie(event) {
