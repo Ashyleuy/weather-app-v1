@@ -81,11 +81,13 @@ function curtemp(response) {
   let ct = document.querySelector("#currenttempmax");
   ct.innerHTML = `${tempma}`;
   let ctm = document.querySelector("#currenttempmin");
-  ctm.innerHTML = ` /${tempmi}°C`;
+  ctm.innerHTML = ` / ${tempmi}`;
+  let cm = document.querySelector("#currentmetric");
   let cth = document.querySelector("li#humid");
   let ctp = document.querySelector("li#pres");
   cth.innerHTML = `Humidity: ${humidity}%`;
   ctp.innerHTML = `Pressure: ${pressure} km/h`;
+  cm.innerHTML = `°C`;
 }
 function curposbut() {
   navigator.geolocation.getCurrentPosition(CurPosition);
