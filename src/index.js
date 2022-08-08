@@ -108,6 +108,8 @@ faren.addEventListener("click", makefaren);
 
 function makefaren(event) {
   event.preventDefault();
+  faren.classList.remove("active");
+  celcius.classList.add("active");
   let farconmax = (curmetmax * 9) / 5 + 32;
   let farconmin = (curmetmin * 9) / 5 + 32;
   let toptemp = document.querySelector(`#currenttempmax`);
@@ -117,6 +119,8 @@ function makefaren(event) {
 }
 function makecelci(event) {
   event.preventDefault();
+  faren.classList.add("active");
+  celcius.classList.remove("active");
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
   toptemp.innerHTML = `${curmetmin}`;

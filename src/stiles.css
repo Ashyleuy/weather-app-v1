@@ -55,19 +55,18 @@ body {
   color: #996340;
   text-decoration: none !important;
 }
-.celci:hover {
-  color: #996340;
-  cursor: pointer;
+.active {
+  color: #a28979 !important;
 }
 .faren {
+  color: #996340;
   position: relative;
   vertical-align: top;
   font-size: 40%;
   font-weight: 400;
-  color: #a28979;
   text-decoration: none !important;
 }
-.faren:hover {
+.active:hover {
   color: #996340;
   cursor: pointer;
 }
