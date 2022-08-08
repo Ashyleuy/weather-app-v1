@@ -27,9 +27,9 @@ body {
 }
 .card-title1 {
   margin: auto;
-  font-size: 50px;
+  font-size: 40px;
 }
-.chosencity {
+#chosencity {
   margin: auto;
   font-size: 50px;
 }
