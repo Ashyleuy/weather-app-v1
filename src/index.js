@@ -61,7 +61,7 @@ function changecity(l) {
 }
 //capatalize first letter
 function capitalize(str) {
-  if (str == null || str.isEmpty()) {
+  if (str == null) {
     return str;
   }
 
