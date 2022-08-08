@@ -51,7 +51,7 @@ body {
   position: relative;
   vertical-align: top;
   font-size: 40%;
-  font-weight: 200;
+  font-weight: 300;
   color: #996340;
   text-decoration: none !important;
 }
@@ -63,8 +63,8 @@ body {
   position: relative;
   vertical-align: top;
   font-size: 40%;
-  font-weight: 200;
-  color: #a2826c;
+  font-weight: 300;
+  color: #a28979;
   text-decoration: none !important;
 }
 .faren:hover {
