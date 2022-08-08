@@ -177,3 +177,7 @@ li {
   text-align: center;
   color: #996340 !important;
 }
+.description {
+  font-size: larger;
+  font-weight: bold;
+}
