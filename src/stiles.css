@@ -178,6 +178,6 @@ li {
   color: #996340 !important;
 }
 .description {
-  font-size: larger;
-  font-weight: bold;
+  font-size: larger !important;
+  font-weight: bold !important;
 }
