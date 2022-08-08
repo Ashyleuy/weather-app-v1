@@ -48,6 +48,7 @@ body {
   font-weight: 200;
 }
 .celci {
+  font-size: 20%;
   font-weight: 200;
   color: #996340;
   text-decoration: none !important;
@@ -57,6 +58,7 @@ body {
   cursor: pointer;
 }
 .faren {
+  font-size: 20%;
   font-weight: 200;
   color: #a2826c;
   text-decoration: none !important;
