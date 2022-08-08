@@ -52,13 +52,15 @@ body {
 }
 .celci:hover {
   color: #996340;
+  cursor: pointer;
 }
 .faren {
   font-weight: 200;
-  color: #a27557;
+  color: #a2826c;
 }
 .faren:hover {
   color: #996340;
+  cursor: pointer;
 }
 .rowtwo {
   height: 200px !important;
