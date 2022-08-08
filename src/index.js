@@ -49,7 +49,7 @@ while (n < 6) {
   let wday = Days[i];
   let cardindex = ind[n - 1];
   let daycard = document.querySelector(`#${cardindex}`);
-  daycard.innerHTML = `Last updated: ${wday}`;
+  daycard.innerHTML = `${wday}`;
   n = n + 1;
 }
 
