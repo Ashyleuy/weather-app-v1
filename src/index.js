@@ -75,8 +75,8 @@ function curtemp(response) {
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
   let humidity = response.data.main.humidity;
-  let wind = response.data.main.wind;
-  let description = response.data.main.description;
+  let wind = response.data.wind.speed;
+  let description = response.data.weather[0].description;
   //let condition = response.data.weather.icon;
   //let dex = weathericon(condition);
   //let bigicon = document.querySelector(`#bigicon`);
