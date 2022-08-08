@@ -151,6 +151,7 @@ li {
   padding-left: 0%;
 }
 a {
+  display: block;
   text-align: center;
-  color: #996340;
+  color: #996340 !important;
 }
