@@ -67,7 +67,6 @@ body {
   text-decoration: none !important;
 }
 .active:hover {
-  color: #996340;
   cursor: pointer;
 }
 .rowtwo {
