@@ -119,8 +119,8 @@ function makefaren(event) {
 }
 function makecelci(event) {
   event.preventDefault();
-  faren.classList.add("active");
   celcius.classList.remove("active");
+  faren.classList.add("active");
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
   toptemp.innerHTML = `${Math.floor(curmetmin)}`;
