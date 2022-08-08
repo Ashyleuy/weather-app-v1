@@ -86,14 +86,13 @@ function curtemp(response) {
   ct.innerHTML = `${tempma}`;
   let ctm = document.querySelector("#currenttempmin");
   ctm.innerHTML = ` / ${tempmi}`;
-  let cm = document.querySelector(`#celci`);
-  let fm = document.querySelector(`#faren`);
   let cth = document.querySelector("li#humid");
   let ctp = document.querySelector("li#pres");
   cth.innerHTML = `Humidity: ${humidity}%`;
   ctp.innerHTML = `Pressure: ${pressure} km/h`;
-  cm.innerHTML = `°C`;
-  fm.innerHTML = `°F`;
+  celci.innerHTML = `°C`;
+  faren.classList.add("active");
+  faren.innerHTML = `°F`;
 }
 function curposbut() {
   navigator.geolocation.getCurrentPosition(CurPosition);
