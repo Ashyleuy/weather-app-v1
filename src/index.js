@@ -82,8 +82,8 @@ function curtemp(response) {
   ct.innerHTML = `${tempma}°`;
   let ctm = document.querySelector("#currenttempmin");
   ctm.innerHTML = ` / ${tempmi}°`;
-  let cth = document.querySelector(`humidity`);
-  let ctp = document.querySelector(`pressure`);
+  let cth = document.querySelector(`li#humidity`);
+  let ctp = document.querySelector(`li#pressure`);
   cth.innerHTML = `Humidity: ${humidity}`;
   ctp.innerHTML = `Pressure: ${pressure}`;
 }
