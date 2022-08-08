@@ -51,7 +51,7 @@ while (n < 6) {
   let wday = Days[i];
   let cardindex = ind[n - 1];
   let daycard = document.querySelector(`#${cardindex}`);
-  daycard.innerHTML = `${wday}`;
+  daycard.innerHTML = `Last updated: ${todaysday} ${wday}`;
   n = n + 1;
 }
 
@@ -59,7 +59,6 @@ function changecity(l) {
   let cc = document.querySelector("#chosencity");
   let ccd = document.querySelector("#day");
   cc.innerHTML = `${l}`;
-  ccd.innerHTML = `Last updated: ${todaysday}`;
 }
 
 //finding current temperature and location
