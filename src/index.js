@@ -21,6 +21,8 @@ let Months = [
   `November`,
   `December`,
 ];
+let curmetmax = null;
+let curmetmin = null;
 
 //let weatherid = ["01d", "02d", "03d", `04d`, `09d`, `10d`, `11d`, `13d`, `50d`];
 
@@ -68,8 +70,10 @@ function CurPosition(position) {
   axios.get(url).then(curtemp);
 }
 function curtemp(response) {
-  let tempma = Math.floor(response.data.main.temp_max);
-  let tempmi = Math.floor(response.data.main.temp_min);
+  curmetmax = response.data.main.temp_max;
+  curmetmin = response.data.main.temp_min;
+  let tempma = Math.floor(curmetmax);
+  let tempmi = Math.floor(curmetmin);
   let humidity = response.data.main.humidity;
   let pressure = response.data.main.pressure;
   //let condition = response.data.weather.icon;
@@ -96,6 +100,21 @@ function curposbut() {
 }
 let button = document.querySelector("#clbut");
 button.addEventListener("click", curposbut);
+//changing metrics
+let celcius = document.querySelector(`#celci`);
+let faren = document.querySelector(`#faren`);
+celcuis.addEventListener("click", makecelci);
+faren.addEventListener("click", makefaren);
+
+function makefaren(event) {
+  event.preventDefault();
+  let farconmax = (curmetmax * 9) / 5 + 32;
+  let farconmin = (curmetmin * 9) / 5 + 32;
+  let toptemp = document.querySelector(`#currenttempmax`);
+  let bottemp = document.querySelector(`#currenttempmin`);
+  toptemp.innerHTML = `${farconmax}`;
+  bottemp.innerHTML = `${farconmin}`;
+}
 
 //finding searched city temp
 function citie(event) {
