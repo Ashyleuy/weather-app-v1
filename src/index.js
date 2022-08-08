@@ -56,8 +56,10 @@ while (n < 6) {
 }
 
 function changecity(l) {
-  let cc = document.querySelector("#day");
-  cc.innerHTML = `${l} - ${todaysday}`;
+  let cc = document.querySelector("#chosencity");
+  let ccd = document.querySelector("#day");
+  cc.innerHTML = `${l}`;
+  ccd.innerHTML = `Last updated: ${todaysday}`;
 }
 
 //finding current temperature and location
