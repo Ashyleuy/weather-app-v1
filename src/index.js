@@ -59,7 +59,14 @@ function changecity(l) {
   let cc = document.querySelector("#chosencity");
   cc.innerHTML = `${l}`;
 }
+//capatalize first letter
+function capitalize(str) {
+  if (str == null || str.isEmpty()) {
+    return str;
+  }
 
+  return str.substring(0, 1).toUpperCase() + str.substring(1);
+}
 //finding current temperature and location
 function CurPosition(position) {
   let coords = [];
@@ -90,7 +97,7 @@ function curtemp(response) {
   let cwd = document.querySelector("li#description");
   let cth = document.querySelector("li#humid");
   let ctp = document.querySelector("li#wi");
-  cwd.innerHTML = `${description}`;
+  cwd.innerHTML = `${capitalize(description)}`;
   cth.innerHTML = `Humidity: ${humidity}%`;
   ctp.innerHTML = `Wind: ${wind} km/h`;
   celci.innerHTML = `°C`;
