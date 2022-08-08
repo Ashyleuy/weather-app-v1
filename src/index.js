@@ -75,7 +75,8 @@ function curtemp(response) {
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
   let humidity = response.data.main.humidity;
-  let pressure = response.data.main.pressure;
+  let wind = response.data.main.wind;
+  let description = response.data.main.description;
   //let condition = response.data.weather.icon;
   //let dex = weathericon(condition);
   //let bigicon = document.querySelector(`#bigicon`);
@@ -86,10 +87,12 @@ function curtemp(response) {
   ct.innerHTML = `${tempma}`;
   let ctm = document.querySelector("#currenttempmin");
   ctm.innerHTML = ` / ${tempmi}`;
+  let cwd = document.querySelector("li#description");
   let cth = document.querySelector("li#humid");
-  let ctp = document.querySelector("li#pres");
+  let ctp = document.querySelector("li#wi");
+  cwd.innerHTML = `${description}`;
   cth.innerHTML = `Humidity: ${humidity}%`;
-  ctp.innerHTML = `Pressure: ${pressure} km/h`;
+  ctp.innerHTML = `Wind: ${wind} km/h`;
   celci.innerHTML = `°C`;
   faren.classList.add("active");
   faren.innerHTML = `°F`;
