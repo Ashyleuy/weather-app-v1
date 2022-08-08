@@ -56,7 +56,7 @@ body {
   text-decoration: none !important;
 }
 .active {
-  color: #a28979;
+  color: #a28979 !important;
 }
 .faren {
   color: #996340 !important;
