@@ -103,7 +103,7 @@ button.addEventListener("click", curposbut);
 //changing metrics
 let celcius = document.querySelector(`#celci`);
 let faren = document.querySelector(`#faren`);
-celcuis.addEventListener("click", makecelci);
+celcius.addEventListener("click", makecelci);
 faren.addEventListener("click", makefaren);
 
 function makefaren(event) {
