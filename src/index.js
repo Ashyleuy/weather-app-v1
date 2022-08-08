@@ -79,9 +79,9 @@ function curtemp(response) {
   let place = response.data.name;
   changecity(place);
   let ct = document.querySelector("#currenttempmax");
-  ct.innerHTML = `${tempma}°`;
+  ct.innerHTML = `${tempma}`;
   let ctm = document.querySelector("#currenttempmin");
-  ctm.innerHTML = ` / ${tempmi}°`;
+  ctm.innerHTML = ` /${tempmi}°C`;
   let cth = document.querySelector("li#humid");
   let ctp = document.querySelector("li#pres");
   cth.innerHTML = `Humidity: ${humidity}%`;
