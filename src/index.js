@@ -115,7 +115,7 @@ function makefaren(event) {
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
   toptemp.innerHTML = `${farconmax}`;
-  bottemp.innerHTML = `/${farconmin}`;
+  bottemp.innerHTML = ` / ${farconmin}`;
 }
 function makecelci(event) {
   event.preventDefault();
@@ -124,7 +124,7 @@ function makecelci(event) {
   let toptemp = document.querySelector(`#currenttempmax`);
   let bottemp = document.querySelector(`#currenttempmin`);
   toptemp.innerHTML = `${Math.floor(curmetmin)}`;
-  bottemp.innerHTML = `/${Math.floor(curmetmax)}`;
+  bottemp.innerHTML = ` / ${Math.floor(curmetmax)}`;
 }
 //finding searched city temp
 function citie(event) {
