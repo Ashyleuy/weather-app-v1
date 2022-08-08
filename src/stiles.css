@@ -49,6 +49,8 @@ body {
 }
 .celci {
   font-weight: 200;
+  color: #996340;
+  text-decoration: none !important;
 }
 .celci:hover {
   color: #996340;
@@ -57,6 +59,7 @@ body {
 .faren {
   font-weight: 200;
   color: #a2826c;
+  text-decoration: none !important;
 }
 .faren:hover {
   color: #996340;
