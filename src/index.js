@@ -37,9 +37,9 @@ let iconclass = [
   `fa-solid fa-snowflake`,
   `fa-solid fa-smog`,
 ];
-let idindex = null;
 function addingcurrenticon(wid) {
   let u = 0;
+  let idindex = 0;
   let widtw = wid.slice(0, 2);
   while (u < 9) {
     if (widtw === ids[u]) {
