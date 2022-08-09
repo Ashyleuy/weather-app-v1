@@ -48,7 +48,6 @@ let ind = [`a`, `b`, `c`, `d`, `e`];
 let n = 1;
 while (n < 6) {
   let i = weekday + n;
-  let daycard = document.querySelector(`#${cardindex}`);
   if (i < 7) {
     let wday = Days[i];
     let cardindex = ind[n - 1];
