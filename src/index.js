@@ -43,9 +43,9 @@ function addingcurrenticon(wid) {
   while (u < 9) {
     if (wid.slice(0, 2) === ids[u]) {
       idindex = u;
-      n = 9;
+      u = 9;
     }
-    n = n + 1;
+    u = u + 1;
   }
   let iconid = findiconid(weatherid);
   let mainicon = document.querySelector(`#current-icon`);
