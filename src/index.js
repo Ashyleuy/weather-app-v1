@@ -48,10 +48,19 @@ let ind = [`a`, `b`, `c`, `d`, `e`];
 let n = 1;
 while (n < 6) {
   let i = weekday + n;
-  let wday = Days[i];
-  let cardindex = ind[n - 1];
   let daycard = document.querySelector(`#${cardindex}`);
-  daycard.innerHTML = `${wday}`;
+  if (i < 7) {
+    let wday = Days[i];
+    let cardindex = ind[n - 1];
+    let daycard = document.querySelector(`#${cardindex}`);
+    daycard.innerHTML = `${wday}`;
+  } else {
+    i = i - 7;
+    let wday = Days[i];
+    let cardindex = ind[n - 1];
+    let daycard = document.querySelector(`#${cardindex}`);
+    daycard.innerHTML = `${wday}`;
+  }
   n = n + 1;
 }
 
