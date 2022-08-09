@@ -45,8 +45,9 @@ function addingcurrenticon(wid) {
     if (widtw === ids[u]) {
       idindex = u;
       u = 9;
+    } else {
+      u = u + 1;
     }
-    u = u + 1;
   }
   let mainicon = document.querySelector(`#current-icon`);
   mainicon.classList.add(iconclass[idindex]);
