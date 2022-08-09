@@ -23,6 +23,7 @@ let Months = [
 ];
 let curmetmax = null;
 let curmetmin = null;
+let weatherid = null;
 
 //let weatherid = ["01d", "02d", "03d", `04d`, `09d`, `10d`, `11d`, `13d`, `50d`];
 
@@ -87,6 +88,7 @@ function CurPosition(position) {
 function curtemp(response) {
   curmetmax = response.data.main.temp_max;
   curmetmin = response.data.main.temp_min;
+  weatherid = response.data.weather[0].icon;
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
   let humidity = response.data.main.humidity;
@@ -156,10 +158,36 @@ let form = document.querySelector("#pleasework");
 form.addEventListener("submit", citie);
 
 //icons?
+let ids = [`01`, `02`, `03`, `04`, `09`, `10`, `11`, `13`, `50`];
+let idindex = null;
+function findiconid(wid) {
+  let u = 0;
+  while (u < 9) {
+    if (wid.slice(0, 2) === ids[u]) {
+      idindex = u;
+      return u;
+    }
+    n = n + 1;
+  }
+}
+let iconid = findiconid(weatherid);
+let iconclass = [
+  `fa-solid fa-sun`,
+  `fa-solid fa-cloud-sun`,
+  `fa-solid fa-cloud-sun`,
+  `fa-solid fa-cloud`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-snowflake`,
+  `fa-solid fa-smog`,
+];
+let mainicon = document.querySelector(`#current-icon`);
+mainicon.classList.add(iconclass[iconid]);
 //<i class="fa-solid fa-sun"></i> clear sky exactly 800
 //<i class="fa-solid fa-cloud"></i> clouds 803 804
 //<i class="fa-solid fa-cloud-rain"></i> shower rain 300 500
 //<i class="fa-solid fa-snowflake"></i> snow 600
 //<i class="fa-solid fa-cloud-sun"></i> scattered clouds 801 802 maybe ignore
-//<i class="fa-solid fa-cloud-bolt"></i> thunder storm 200
+//<i class="fa-solid fa-cloud-rain"></i> thunder storm 200
 //<i class="fa-solid fa-smog"></i> mist 700
