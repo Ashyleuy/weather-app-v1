@@ -27,15 +27,15 @@ let weatherid = null;
 //icons?
 let ids = [`01`, `02`, `03`, `04`, `09`, `10`, `11`, `13`, `50`];
 let iconclass = [
-  `fa-solid fa-sun`,
-  `fa-solid fa-cloud-sun`,
-  `fa-solid fa-cloud-sun`,
-  `fa-solid fa-cloud`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-snowflake`,
-  `fa-solid fa-smog`,
+  `fa-sun`,
+  `fa-cloud-sun`,
+  `fa-cloud-sun`,
+  `fa-cloud`,
+  `fa-cloud-rain`,
+  `fa-cloud-rain`,
+  `fa-cloud-rain`,
+  `fa-snowflake`,
+  `fa-smog`,
 ];
 function addingcurrenticon(wid) {
   let u = 0;
@@ -50,6 +50,7 @@ function addingcurrenticon(wid) {
     }
   }
   let mainicon = document.querySelector(`#current-icon`);
+  mainicon.classList.add(`fa-solid`);
   mainicon.classList.add(iconclass[idindex]);
 }
 
