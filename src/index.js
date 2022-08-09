@@ -24,6 +24,33 @@ let Months = [
 let curmetmax = null;
 let curmetmin = null;
 let weatherid = null;
+//icons?
+let ids = [`01`, `02`, `03`, `04`, `09`, `10`, `11`, `13`, `50`];
+let iconclass = [
+  `fa-solid fa-sun`,
+  `fa-solid fa-cloud-sun`,
+  `fa-solid fa-cloud-sun`,
+  `fa-solid fa-cloud`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-cloud-rain`,
+  `fa-solid fa-snowflake`,
+  `fa-solid fa-smog`,
+];
+let idindex = null;
+function addingcurrenticon(wid) {
+  let u = 0;
+  while (u < 9) {
+    if (wid.slice(0, 2) === ids[u]) {
+      idindex = u;
+      n = 9;
+    }
+    n = n + 1;
+  }
+  let iconid = findiconid(weatherid);
+  let mainicon = document.querySelector(`#current-icon`);
+  mainicon.classList.add(iconclass[iconid]);
+}
 
 //let weatherid = ["01d", "02d", "03d", `04d`, `09d`, `10d`, `11d`, `13d`, `50d`];
 
@@ -89,6 +116,7 @@ function curtemp(response) {
   curmetmax = response.data.main.temp_max;
   curmetmin = response.data.main.temp_min;
   weatherid = response.data.weather[0].icon;
+  addingcurrenticon(weatherid);
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
   let humidity = response.data.main.humidity;
@@ -158,35 +186,7 @@ let form = document.querySelector("#pleasework");
 form.addEventListener("submit", citie);
 
 //icons?
-let ids = [`01`, `02`, `03`, `04`, `09`, `10`, `11`, `13`, `50`];
-let idindex = null;
-function findiconid(wid) {
-  let u = 0;
-  while (u < 9) {
-    if (wid.slice(0, 2) === ids[u]) {
-      idindex = u;
-      return u;
-    }
-    n = n + 1;
-  }
-}
 
-let iconid = findiconid(weatherid);
-console.log(weatherid);
-console.log(iconid);
-let iconclass = [
-  `fa-solid fa-sun`,
-  `fa-solid fa-cloud-sun`,
-  `fa-solid fa-cloud-sun`,
-  `fa-solid fa-cloud`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-cloud-rain`,
-  `fa-solid fa-snowflake`,
-  `fa-solid fa-smog`,
-];
-let mainicon = document.querySelector(`#current-icon`);
-mainicon.classList.add(iconclass[iconid]);
 //<i class="fa-solid fa-sun"></i> clear sky exactly 800
 //<i class="fa-solid fa-cloud"></i> clouds 803 804
 //<i class="fa-solid fa-cloud-rain"></i> shower rain 300 500
