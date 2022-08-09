@@ -170,7 +170,10 @@ function findiconid(wid) {
     n = n + 1;
   }
 }
+
 let iconid = findiconid(weatherid);
+console.log(weatherid);
+console.log(iconid);
 let iconclass = [
   `fa-solid fa-sun`,
   `fa-solid fa-cloud-sun`,
