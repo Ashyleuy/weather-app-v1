@@ -40,21 +40,17 @@ let iconclass = [
 let idindex = null;
 function addingcurrenticon(wid) {
   let u = 0;
+  let widtw = wid.slice(0, 2);
   while (u < 9) {
-    if (wid.slice(0, 2) === ids[u]) {
+    if (widtw === ids[u]) {
       idindex = u;
       u = 9;
     }
     u = u + 1;
   }
-  let iconid = findiconid(weatherid);
   let mainicon = document.querySelector(`#current-icon`);
-  mainicon.classList.add(iconclass[iconid]);
+  mainicon.classList.add(iconclass[idindex]);
 }
-
-//let weatherid = ["01d", "02d", "03d", `04d`, `09d`, `10d`, `11d`, `13d`, `50d`];
-
-//return weather id icon index
 
 //finds time and date
 let now = new Date();
