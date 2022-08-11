@@ -70,26 +70,6 @@ let DDate = `${date}/${month + 1}/${year}`;
 let Datee = document.querySelector("#date-time");
 Datee.innerHTML = `Last updated: ${todaysday} - ${DDate}  ${time} `;
 
-//sets next five days
-let ind = [`a`, `b`, `c`, `d`, `e`];
-let n = 1;
-while (n < 6) {
-  let i = weekday + n;
-  if (i < 7) {
-    let wday = Days[i];
-    let cardindex = ind[n - 1];
-    let daycard = document.querySelector(`#${cardindex}`);
-    daycard.innerHTML = `${wday}`;
-  } else {
-    i = i - 7;
-    let wday = Days[i];
-    let cardindex = ind[n - 1];
-    let daycard = document.querySelector(`#${cardindex}`);
-    daycard.innerHTML = `${wday}`;
-  }
-  n = n + 1;
-}
-
 function changecity(l) {
   let cc = document.querySelector("#chosencity");
   cc.innerHTML = `${l}`;
@@ -180,13 +160,3 @@ function citie(event) {
 
 let form = document.querySelector("#pleasework");
 form.addEventListener("submit", citie);
-
-//icons?
-
-//<i class="fa-solid fa-sun"></i> clear sky exactly 800
-//<i class="fa-solid fa-cloud"></i> clouds 803 804
-//<i class="fa-solid fa-cloud-rain"></i> shower rain 300 500
-//<i class="fa-solid fa-snowflake"></i> snow 600
-//<i class="fa-solid fa-cloud-sun"></i> scattered clouds 801 802 maybe ignore
-//<i class="fa-solid fa-cloud-rain"></i> thunder storm 200
-//<i class="fa-solid fa-smog"></i> mist 700

@@ -3,10 +3,7 @@ body {
   background-color: #faf5e2 !important;
   color: #faf5e2;
 }
-.img {
-  max-width: 2000px;
-  object-fit: fill;
-}
+
 .content {
   padding-top: 25px;
   padding-bottom: 10%;
@@ -34,13 +31,7 @@ body {
   margin: auto;
   font-size: 30px;
 }
-.card-text {
-  padding-top: 10%;
-  display: block;
-  text-align: center;
-  margin: auto;
-  font-size: x-large;
-}
+
 .card-title2 {
   font-size: 80px;
 }
@@ -76,14 +67,7 @@ body {
 .active:hover {
   cursor: pointer;
 }
-.rowtwo {
-  height: 200px !important;
-  width: 160px;
-  padding: 20px;
-  color: #996340;
-  background-color: #faf5e2 !important;
-  border-radius: 3px;
-}
+
 .row1 {
   padding: 30px;
   color: #996340;
@@ -178,11 +162,6 @@ h6 {
   padding: 0 !important;
 }
 
-.card-title {
-  padding-top: 10px;
-  text-align: center;
-  font-size: x-large !important;
-}
 ul {
   list-style-type: none;
   color: #996340;
