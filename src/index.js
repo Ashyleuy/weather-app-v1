@@ -114,6 +114,7 @@ function curtemp(response) {
   curmetmax = response.data.main.temp_max;
   curmetmin = response.data.main.temp_min;
   weatherid = response.data.weather[0].icon;
+  console.log(weatherid);
   addingcurrenticon(weatherid);
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
