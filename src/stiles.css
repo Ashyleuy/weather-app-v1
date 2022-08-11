@@ -34,6 +34,12 @@ body {
   margin: auto;
   font-size: 30px;
 }
+.card-text {
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: larger;
+}
 .card-title2 {
   font-size: 80px;
 }
