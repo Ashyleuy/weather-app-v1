@@ -111,7 +111,7 @@ function CurPosition(position) {
   let APIkey2 = "82318d3468f16b2e32e26de1c1d2e0f9";
   //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey1}&units=metric`;
   //axios.get(url).then(curtemp);
-  let url2 = `api.openweathermap.org/data/2.5/forecast/daily?lat=${coords[0]}&lon=${coords[1]}&cnt=5&appid=${APIkey2}&units=metric`;
+  let url2 = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coords[0]}&lon=${coords[1]}&cnt=5&appid=${APIkey2}&units=metric`;
   console.log(url2);
   axios.get(url2).then(forecasttemp);
 }
