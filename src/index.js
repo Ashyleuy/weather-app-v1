@@ -110,12 +110,21 @@ function CurPosition(position) {
   let APIkey = "3ae5fb236870eefa55ebb52fb74c96e8";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey}&units=metric`;
   axios.get(url).then(curtemp);
+  let url2 = `https://api.openweathermap.org/data/3.0/onecall?lat=${coords[0]}&lon=${coords[1]}&exclude=minutely,hourly,alerts,current&appid=${APIkey}&units=metric`;
+  axios.get(url2).(forecasttemp);
+  
+}
+function forecasttemp(response) {
+  console.log(response);
+  //let forecastday = response.data.daily.dailydt;
+  //let maxtamp = response.data.daily.temp.max;
+  //let mintamp = response.data.daily.temp.min;
+  //let ictamp = response.data.daily.weather.icon;
 }
 function curtemp(response) {
   curmetmax = response.data.main.temp_max;
   curmetmin = response.data.main.temp_min;
   weatherid = response.data.weather[0].icon;
-  console.log(weatherid);
   addingcurrenticon(weatherid);
   let tempma = Math.floor(curmetmax);
   let tempmi = Math.floor(curmetmin);
