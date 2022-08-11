@@ -50,6 +50,7 @@ function addingcurrenticon(wid) {
     }
   }
   let mainicon = document.querySelector(`#current-icon`);
+  mainicon.removeAttribute("class");
   mainicon.classList.add(`fa-solid`);
   mainicon.classList.add(iconclass[idindex]);
 }
@@ -121,10 +122,6 @@ function curtemp(response) {
   let humidity = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let description = response.data.weather[0].description;
-  //let condition = response.data.weather.icon;
-  //let dex = weathericon(condition);
-  //let bigicon = document.querySelector(`#bigicon`);
-  //bigicon.innerHTML = `${dex}`;
   let place = response.data.name;
   changecity(place);
   let ct = document.querySelector("#currenttempmax");
