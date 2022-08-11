@@ -171,7 +171,8 @@ li {
   padding-left: 0%;
 }
 .githublink {
-  display: block;
+  display: absolute;
+  bottom: 10px;
   text-align: center;
   color: #996340 !important;
 }
