@@ -128,7 +128,13 @@ body {
   padding: 3px;
   color: #996340 !important;
 }
-
+.fa-cloud-sun {
+  font-size: 250%;
+  display: block;
+  text-align: center;
+  padding: 3px;
+  color: #996340 !important;
+}
 .fa-snowflake {
   font-size: 250%;
   display: block;
@@ -136,7 +142,7 @@ body {
   padding: 3px;
   color: #996340 !important;
 }
-.fa-cloud-bolt {
+.fa-smog {
   font-size: 250%;
   display: block;
   text-align: center;
