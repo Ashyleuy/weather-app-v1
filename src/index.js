@@ -111,8 +111,7 @@ function CurPosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey}&units=metric`;
   axios.get(url).then(curtemp);
   let url2 = `https://api.openweathermap.org/data/3.0/onecall?lat=${coords[0]}&lon=${coords[1]}&exclude=minutely,hourly,alerts,current&appid=${APIkey}&units=metric`;
-  axios.get(url2).(forecasttemp);
-  
+  axios.get(url2).then(forecasttemp);
 }
 function forecasttemp(response) {
   console.log(response);
