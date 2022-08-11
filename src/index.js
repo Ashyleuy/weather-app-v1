@@ -107,21 +107,11 @@ function CurPosition(position) {
   let coords = [];
   coords.push(position.coords.latitude);
   coords.push(position.coords.longitude);
-  //let APIkey1 = "3ae5fb236870eefa55ebb52fb74c96e8";
-  let APIkey2 = "82318d3468f16b2e32e26de1c1d2e0f9";
-  //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey1}&units=metric`;
-  //axios.get(url).then(curtemp);
-  let url2 = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coords[0]}&lon=${coords[1]}&cnt=5&appid=${APIkey2}&units=metric`;
-  console.log(url2);
-  axios.get(url2).then(forecasttemp);
+  let APIkey1 = "3ae5fb236870eefa55ebb52fb74c96e8";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${APIkey1}&units=metric`;
+  axios.get(url).then(curtemp);
 }
-function forecasttemp(response) {
-  console.log(response);
-  //let forecastday = response.data.daily.dailydt;
-  //let maxtamp = response.data.daily.temp.max;
-  //let mintamp = response.data.daily.temp.min;
-  //let ictamp = response.data.daily.weather.icon;
-}
+
 function curtemp(response) {
   curmetmax = response.data.main.temp_max;
   curmetmin = response.data.main.temp_min;
