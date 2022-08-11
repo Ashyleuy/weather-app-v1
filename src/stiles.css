@@ -156,7 +156,13 @@ body {
   padding: 3px;
   color: #996340 important;
 }
-
+.fa-cloud-bolt {
+  font-size: 250%;
+  display: block;
+  text-align: center;
+  padding: 3px;
+  color: #996340 important;
+}
 h6 {
   font-size: 100% !important;
 }

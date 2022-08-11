@@ -33,7 +33,7 @@ let iconclass = [
   `fa-cloud`,
   `fa-cloud-rain`,
   `fa-cloud-rain`,
-  `fa-cloud-rain`,
+  `fa-cloud-bolt`,
   `fa-snowflake`,
   `fa-smog`,
 ];
